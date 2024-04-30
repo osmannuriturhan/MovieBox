@@ -12,6 +12,11 @@ body {
   font-style: normal;
 }
 
+.container {
+  background-color: black;
+  color: white;
+}
+
 /*! base css end  */
 
 /*! navbar start  */
@@ -22,6 +27,7 @@ body {
   color: white;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .navbar-wrapper {
@@ -41,6 +47,7 @@ body {
   display: flex;
   list-style-type: none;
   column-gap: 30px;
+  padding: 0;
 }
 
 .menu-list-item {
@@ -148,6 +155,7 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   margin: 30px 0;
+  color: black;
 }
 
 .featured-buttons {
@@ -172,3 +180,96 @@ body {
 }
 
 /*! featured end  */
+
+/*! filter start  */
+
+.movie-list-filter {
+  margin: 20px 0 20px 50px;
+  padding: 20px;
+}
+
+.movie-list-filter select {
+  background-color: black;
+  color: white;
+  padding: 8px 0;
+  width: 125px;
+}
+/*! filter end  */
+
+/*! movie list start  */
+
+.movie-list-container {
+  margin-left: 70px;
+}
+
+.movie-list {
+  list-style: none;
+  padding: 0;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.movie-item {
+  position: relative;
+}
+
+.movie-list-wrapper {
+  overflow: hidden;
+}
+
+.movie-item:hover .movie-item-title,
+.movie-item:hover .movie-item-buttons {
+  opacity: 1;
+}
+
+.movie-item:hover .movie-item-img {
+  transform: scale(1.1);
+  margin: 0 30px;
+  opacity: 0.5;
+}
+
+.movie-item-img {
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  transition: 0.7s all ease;
+}
+
+.movie-item-title {
+  background-color: rgb(40, 40, 40, 0.4);
+  padding: 0 10px;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-item-buttons {
+  background-color: rgb(40, 40, 40, 0.4);
+  padding: 10px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 10%;
+  left: 50px;
+  display: flex;
+  column-gap: 20px;
+  opacity: 0;
+}
+
+.movie-item-buttons i {
+  cursor: pointer;
+  opacity: 0.5;
+  font-size: 20px;
+  transition: 0.5s all ease;
+}
+
+.movie-item-buttons i:hover {
+  opacity: 1;
+}
+
+/*! movie list end  */
